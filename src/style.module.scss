@@ -1,0 +1,9 @@
+.nav{
+  > a:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+:global(#root) {
+  text-align: center;
+}
