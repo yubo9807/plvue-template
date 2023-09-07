@@ -18,7 +18,8 @@ const server = createServer(async (req, res) => {
 
   if (getStaticFileExts().includes(ext)) {
     // 静态资源
-    const filename = resolve(__dirname, deployUrl, url.slice(1));
+    const filename = resolve(__dirname, req.url.slice(1));
+
     readFile(filename, (err, content) => {
       if (err) {
         res.writeHead(404, { 'Content-Type': 'text/plain' });
