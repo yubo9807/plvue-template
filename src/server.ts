@@ -9,16 +9,16 @@ import env from "~/config/env";
 const deployUrl = env.BASE_URL.slice(1);
 
 // html 模版
-const html = readFileSync(resolve(__dirname, deployUrl, 'index.html'), 'utf-8');
+const html = readFileSync(resolve(__dirname, 'index.html'), 'utf-8');
 
 const server = createServer(async (req, res) => {
 
-  const url = req.url.replace(env.BASE_URL || '/', '/');
+  const url = req.url.replace(env.BASE_URL, '');
   const ext = extname(url);
 
   if (getStaticFileExts().includes(ext)) {
     // 静态资源
-    const filename = resolve(__dirname, req.url.slice(1));
+    const filename = resolve(__dirname, url.slice(1));
 
     readFile(filename, (err, content) => {
       if (err) {
