@@ -18,6 +18,6 @@
     "vite": "^4.4.9"
   },
   "dependencies": {
-    "pl-vue": "^0.2.2"
+    "pl-vue": "^0.2.3"
   }
 }

@@ -6,8 +6,6 @@ import App from "./app";
 import { getMimeType, getStaticFileExts } from "./utils/string";
 import env from "~/config/env";
 
-const deployUrl = env.BASE_URL.slice(1);
-
 // html 模版
 const html = readFileSync(resolve(__dirname, 'index.html'), 'utf-8');
 
