@@ -1,4 +1,5 @@
-import { h, Fragment, Link, Router, createRouter } from "pl-vue";
+import { h, Fragment } from "pl-vue";
+import { Link, Router, createRouter } from 'pl-vue/lib/router';
 import env from '~/config/env';
 import Home from './pages/home';
 import About from './pages/about';

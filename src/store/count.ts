@@ -1,4 +1,4 @@
-import { createStore } from "pl-vue";
+import { createStore } from "pl-vue/lib/store";
 
 const state = {
   count: 0,
