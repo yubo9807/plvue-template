@@ -1,4 +1,4 @@
-import { h, Fragment } from "pl-vue";
+import { h, Fragment, render } from "pl-vue";
 import { Link, Route, Router, initRouter } from 'pl-vue/lib/router';
 import env from '~/config/env';
 import Home from './pages/home';
@@ -24,4 +24,5 @@ function App() {
   </>
 }
 
-export default App;
+const root = document.getElementById('root')
+root.appendChild(render(<App />));
