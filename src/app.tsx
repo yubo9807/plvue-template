@@ -13,14 +13,14 @@ function App() {
   });
 
   return <>
-    <Router notFound={NotFound}>
-      <Route path="/" component={Home} />
-      <Route path="/about" component={About} />
-    </Router>
     <nav className={style.nav}>
       <Link to='/'>Home</Link>
       <Link to='/about'>About</Link>
     </nav>
+    <Router notFound={NotFound}>
+      <Route path="/" component={Home} />
+      <Route path="/about" component={About} />
+    </Router>
   </>
 }
 
