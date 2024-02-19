@@ -2,6 +2,7 @@ node_modules
 .DS_Store
 /dist
 /lib
+package-lock.json
 
 *.local
 *.log
